@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <title>HTML Academy: Седона</title>
+    </head>
+    <body>
+      <div class="container">
+        <header class="page-header">
+          <nav class="main-nav">
+            <div class="main-nav__container main-nav__container--opened">
+              <button type="button" class="main-nav__close main-nav__close--nojs"><span class="visually-hidden"></span></button>
+              <ul class="main-nav__list site-list">
+                <li class="site-list__item site-list__item--active"><a class="site-list__link" href="index.html">Информация</a></li>
+                <li class="site-list__item"><a class="site-list__link" href="#">Фото и видео</a></li>
+                <li class="site-list__item"><a class="site-list__link" href="#">Карта Штата</a></li>
+                <li class="site-list__item"><a class="site-list__link" href="#">Гостиницы</a></li>
+              </ul>
+            </div>
+            <div class="page-header__container">
+              <a class="page-header__logo">
+                <img src="https://via.placeholder.com/150x150" alt="Седона">
+              </a>
+              <button type="button" class="main-nav__toggle main-nav__toggle--nojs"><span class="visually-hidden">Открыть меню</span></button>
+            </div>
+          </nav>
+        </header>
+
+        <main class="catalog-main">
+          <section class="catalog-main__filter filter">
+            <h2 class="visually-hidden">Фильтр</h2>
+            <div class="filter__structure">
+              <p>Инфраструктура:</p>
+              <input type="checkbox" name="Бассейн" id="pool" checked>Бассейн
+              <input type="checkbox" name="Парковка" id="parking">Парковка
+              <input type="checkbox" name="Wi-Fi" id="net">Wi-Fi
+            </div>
+            <div class="filter__housetype">
+              <p>Тип дома:</p>
+              <input type="checkbox" name="Гостиница" id="hotel" checked>Гостиница
+              <input type="checkbox" name="Мотель" id="motel" checked>Мотель
+              <input type="checkbox" name="Апартаменты" id="aparts" checked>Апартаменты
+            </div>
+            <div class="filter__slider">
+              <p>Стоимость в сутки, ₽:</p>
+              <p>от 0</p>
+              <p>до 3000</p>
+              <input type="range" name="slider" id="range">
+              <button class="button">Показать</button>
+            </div>
+          </section>
+
+          <section class="catalog-main__sort sort">
+            <h2 class="visually-hidden">Сортировка</h2>
+            <div class="sort__container">
+              <h2>Найдено: 3</h2>
+              <p>Сортировка:</p>
+              <span>по цене</span>
+              <span>по типу</span>
+              <span>по рейтингу</span>    
+            </div>
+          </section>
+
+          <section class="catalog-main__result result">
+            <h2 class="visually-hidden">Результат</h2>
+            <div>
+              <img src="https://via.placeholder.com/150x150" alt="">
+              <h2>Amara Resort & Spa</h2>
+              <span>Гостиница</span>
+              <span>От 4000 ₽</span>
+              <button>Подробнее</button>
+              <button>Забронировать</button>
+              <p>Рейтинг: 8,5</p>
+            </div>
+            <div>
+              <img src="https://via.placeholder.com/150x150" alt="">
+              <h2>Desert Quail Inn</h2>
+              <span>Мотель</span>
+              <span>От 3000 ₽</span>
+              <button>Подробнее</button>
+              <button>Забронировать</button>
+              <p>Рейтинг: 8,9</p>
+            </div>
+            <div>
+              <img src="https://via.placeholder.com/150x150" alt="">
+              <h2>Villas at Poco Diablo</h2>
+              <span>Апартаменты</span>
+              <span>От 2000 ₽</span>
+              <button>Подробнее</button>
+              <button>Забронировать</button>
+              <p>Рейтинг: 9,2</p>
+            </div>
+          </section>
+        </main>        
+
+      <footer class="page-footer">
+        <div class="page-footer__container">
+          <h2 class="page-footer__title">
+            #VISITSEDONA
+          </h2>
+          <p class="page-footer__phone">+7 800 555-86-28</p>
+          <div class="page-footer__social social">
+            <ul class="social-list">
+              <li class="social-item">
+                <a class="social__link" href="https://twitter.com">twitter</a>
+              </li>
+              <li class="social-item">
+                <a class="social__link" href="https://www.facebook.com/">facebook</a>
+              </li>
+              <li class="social-item">
+                <a class="social__link" href="https://www.youtube.com/">youtube</a>
+              </li>
+            </ul>
+          </div>
+          <div class="page-footer__copyright copyright">
+            <p class="copyright__text site-text">Разработано</p>
+            <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+              HTMLacademy
+            </a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
