@@ -15,7 +15,6 @@ try {
 }
 
 formLink.removeAttribute('href');
-modal.classList.remove('modal--nojs');
 
 openButton.addEventListener("click", () => {
     modal.classList.toggle('modal-show');
