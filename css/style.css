@@ -365,6 +365,7 @@ img {
   display: inline-block;
   width: 568px;
   padding: 31px 0;
+  vertical-align: top;
   background-color: var(--basic-brown);
   font-size: 21px;
   font-weight: bold;
