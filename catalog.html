@@ -20,7 +20,7 @@
             
           </ul>
           <div class="page-header__container">
-            <a href="#" class="page-header__logo">
+            <a href="index.html" class="page-header__logo">
               <img class="logo" src="img/logo.svg" alt="Седона" width="138" height="70">
             </a>
           </div>
@@ -36,17 +36,17 @@
                 <p class="filter__structure-title">Инфраструктура:</p>
                 <div class="filter__stucture-checkbox">
                   <label class="pool" for="pool">
-                    <input class="checkbox__input" type="checkbox" name="Бассейн" id="pool" checked>
+                    <input class="checkbox__input" type="checkbox" name="Бассейн" id="pool" checked aria-label="Чекбокс">
                     <span class="check__box check__box--pool"></span>
                     Бассейн
                   </label>
                   <label class="parking" for="parking">
-                    <input class="checkbox__input" type="checkbox" name="Парковка" id="parking">
+                    <input class="checkbox__input" type="checkbox" name="Парковка" id="parking" aria-label="Чекбокс">
                     <span class="check__box check__box--parking"></span>
                     Парковка
                   </label>
                   <label class="net" for="net">
-                    <input class="checkbox__input" type="checkbox" name="Wi-Fi" id="net">
+                    <input class="checkbox__input" type="checkbox" name="Wi-Fi" id="net" aria-label="Чекбокс">
                     <span class="check__box check__box--net"></span>
                     Wi-Fi
                   </label>
@@ -56,17 +56,17 @@
                 <p class="filter__housetype-title">Тип Жилья:</p>
                 <div class="filter__housetype-checkbox">
                   <label class="hotel" for="hotel">
-                    <input class="checkbox__input" type="checkbox" name="Гостиница" id="hotel" checked>
+                    <input class="checkbox__input" type="checkbox" name="Гостиница" id="hotel" checked aria-label="Чекбокс">
                     <span class="check__box check__box--hotel"></span>
                     Гостиница
                   </label>
                   <label class="motel" for="motel">
-                    <input class="checkbox__input" type="checkbox" name="Мотель" id="motel" checked>
+                    <input class="checkbox__input" type="checkbox" name="Мотель" id="motel" checked aria-label="Чекбокс">
                     <span class="check__box check__box--motel"></span>
                     Мотель
                   </label>
                   <label class="aparts" for="aparts">
-                    <input class="checkbox__input" type="checkbox" name="Апартаменты" id="aparts" checked>
+                    <input class="checkbox__input" type="checkbox" name="Апартаменты" id="aparts" checked aria-label="Чекбокс">
                     <span class="check__box check__box--aparts"></span>
                     Апартаменты
                   </label>
@@ -79,21 +79,22 @@
                 <div class="price-controls">
                   <label class="min-price">
                     <span class="min-price__text">от</span>
-                    <input type="number" name="min-price" value="0">
+                    <input class="min-price__input" type="number" name="min-price" value="0" aria-label="От 0">
                   </label>
                   <label class="max-price">
                     <span class="max-price__text">до</span>
-                    <input type="number" name="max-price" value="3000">
+                    <input class="max-price__input" type="number" name="max-price" value="3000" aria-label="До 3000">
                   </label>
                 </div>
                 <div class="range-controls">
                   <div class="scale">
                     <div class="bar"></div>
+                    <div class="opacity-bar"></div>
                   </div>
                   <div class="toggle toggle-min"></div>
                   <div class="toggle toggle-max"></div>
                 </div>
-                <button class="filter__button" type="submit">Показать</button>
+                <button class="filter__button" type="submit" aria-label="Показать">Показать</button>
               </div>
             </fieldset>
           </form>
@@ -126,8 +127,8 @@
               <h2 class="result__container-title">Amara Resort & Spa</h2>
               <span>Гостиница</span>
               <span class="result__container-cost--amara">От 4000 ₽</span><br>
-              <button class="result__button--more">Подробнее</button>
-              <button class="result__button--book">Забронировать</button>
+              <button class="result__button--more" aria-label="Подробнее">Подробнее</button>
+              <button class="result__button--book" aria-label="Забронировать">Забронировать</button>
             </div>
             <div class="rating">
               <div class="rating__star">
@@ -146,8 +147,8 @@
               <h2 class="result__container-title">Desert Quail Inn</h2>
               <span>Мотель</span>
               <span class="result__container-cost--desert">От 3000 ₽</span><br>
-              <button class="result__button--more">Подробнее</button>
-              <button class="result__button--book">Забронировать</button>
+              <button class="result__button--more" aria-label="Подробнее">Подробнее</button>
+              <button class="result__button--book" aria-label="Забронировать">Забронировать</button>
             </div>
             <div class="rating">
               <div class="rating__star">
@@ -161,11 +162,11 @@
           <div class="result__container">
             <img src="img/villas.jpg" alt="Villas at Poco Diablo" width="135" height="90">
             <div class="result__container-action">
-              <h2 class="result__container-title">Villas at Poco Diablo</h2>
+              <h2 class="result__container-title" aria-label="Villas at Poco Diablo">Villas at Poco Diablo</h2>
               <span>Апартаменты</span>
               <span class="result__container-cost--villas">От 2000 ₽</span><br>
-              <button class="result__button--more">Подробнее</button>
-              <button class="result__button--book">Забронировать</button>
+              <button class="result__button--more" aria-label="Подробнее">Подробнее</button>
+              <button class="result__button--book" aria-label="Забронировать">Забронировать</button>
             </div>
             <div class="rating">
               <div class="rating__star">
@@ -183,30 +184,33 @@
           <h2 class="page-footer__sharp">
             #VISITSEDONA
           </h2>
-          <a class="page-footer__phone" href="tel:+78005558628">+7 800 555-86-28</a>
+          <a class="page-footer__phone" href="tel:+78005558628" aria-label="Телефон: +7 800 555-86-28">+7 800 555-86-28</a>
         </div>
         <div class="page-footer__social social">
           <ul class="social-list">
-            <li class="social-item">
-              <a class="social__link" href="https://twitter.com">
-                <img class="social__image--twitter" src="img/icon-twitter.svg" alt="Twitter" width="17" height="17">
+            <li class="social__item">
+              <a class="social-button" href="https://twitter.com/home" aria-label="Twitter">
+                <span class="visually-hidden">Twitter</span>
+                <svg width="18" height="15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.3.17c1.7-.5 3.1.2 3.7 1.1.7-.2 1.4-.5 2.1-.7 0 .8-.5 1.5-.9 1.7.7.2 1.3-.5 1.3-.5-.2 1-1 1.7-1.6 2-.2 6.6-3.3 11-10.4 10.8H5c-.4 0-4.3-.4-5-1.8 2.3.2 4-.4 4.8-1.1-1-.3-2.8-.5-3.1-2.9.4.1.6.2 1.3.1-1.2-.8-2.6-1.5-2.5-3.7.3.3 1.1.5 1.4.5-.7-.2-2-3.3-.9-4.8 1.9 1.8 3.8 3.5 7.4 3.7.1-2.3 1.1-3.8 2.9-4.4z" fill="#fff"/></svg>
               </a>
             </li>
-            <li class="social-item">
-              <a class="social__link" href="https://www.facebook.com/">
-                <img class="social__image--facebook" src="img/icon-facebook.svg" alt="Facebook" width="12" height="22">
+            <li class="social__item">
+              <a class="social-button" href="https://ru-ru.facebook.com/" aria-label="Facebook">
+                <span class="visually-hidden">Facebook</span>
+                <svg width="19" height="22" viewBox="0 0 10.15 21.74"><path d="M3.34 1.12A4.77 4.77 0 0 1 6.53 0h3.61v3.81H7.81a1.07 1.07 0 0 0-1.09.83v2.55h3.42c-.08 1.23-.24 2.45-.41 3.67h-3v10.87H2.21V10.86H0V7.21h2.19V3.66a3.83 3.83 0 0 1 1.15-2.54z" fill="#fff"/></svg>
               </a>
             </li>
-            <li class="social-item">
-              <a class="social__link" href="https://www.youtube.com/">
-                <img class="social__image--youtube" src="img/icon-youtube.svg" alt="Youtube" width="20" height="16">
+            <li class="social__item">
+              <a class="social-button" href="https://www.youtube.com/" aria-label="Youtube">
+                <span class="visually-hidden">Youtube</span>
+                <svg width="20" height="14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.1 0H2.8C1.3 0 0 1.3 0 2.8v8.3C0 12.7 1.3 14 2.8 14h14.3c1.6 0 2.8-1.3 2.8-2.8V2.8C20 1.3 18.7 0 17.1 0zM7 10.4V3.6L13.8 7 7 10.4z" fill="#fff"/></svg>
               </a>
             </li>
           </ul>
         </div>
         <div class="page-footer__copyright copyright">
           <p class="copyright__text site-text">Website by</p>
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/htmlcss">
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/htmlcss" aria-label="htmlacademy">
             <svg width="115" height="34" fill="#000" xmlns="http://www.w3.org/2000/svg"><g class="htmlsvg" clip-path="url(#clip0)"><path d="M0 12.9v2.6h2.5v-2.6H0zM11.6 4.5c-1.5 0-2.8.7-3.6 1.8V0H6v15.5h2v-5.3C8 8 9.2 6.5 11.1 6.5c1.9 0 3 1.4 3 3.2v5.8h2V9.4c0-3-1.9-4.9-4.6-4.9zM26.6 4.8h-4.8V1.1h-2v3.7h-2v2h2v6c0 1.7 1 2.7 2.7 2.7h4.1v-2H23c-.7 0-1-.4-1-1V6.7h4.7v-2zM41.1 4.6c-1.6 0-2.8.7-3.5 2-.7-1.2-1.9-2-3.4-2s-2.5.7-3.2 1.8V4.8h-2v10.7h2V10c0-2 1-3.5 2.7-3.5 1.5 0 2.3 1 2.3 2.6v6.4h2V9.8c0-2.4 1.5-3.3 2.7-3.3 1.5 0 2.3 1 2.3 2.6v6.4h2V8.9c0-2.5-1.4-4.3-3.9-4.3zM47.8 12.7c0 1.7 1 2.8 2.8 2.8h2v-2H51c-.7 0-1-.4-1-1V0h-2v12.7zM28.9 19.7c-.9-1-2.2-1.8-3.9-1.8-3.1 0-5.4 2.3-5.4 5.5 0 3.3 2.3 5.7 5.4 5.6 1.8 0 3-.8 3.8-2h.1v1.7h2V18.2h-2v1.5zm-3.6 7.4a3.5 3.5 0 01-3.6-3.7c0-2 1.4-3.6 3.6-3.6s3.6 1.6 3.6 3.6-1.4 3.7-3.6 3.7zM44.2 22a5.3 5.3 0 00-5.4-4.1 5.4 5.4 0 00-5.6 5.5c0 3.2 2.3 5.6 5.6 5.6 2.8 0 5-1.8 5.4-4.2h-2.1a3.3 3.3 0 01-3.3 2.3 3.5 3.5 0 01-3.6-3.7c0-2 1.5-3.6 3.6-3.6 1.7 0 2.9 1 3.3 2.2h2.1zM55 19.7c-.8-1-2-1.8-3.8-1.8-3.1 0-5.4 2.3-5.4 5.5 0 3.3 2.3 5.7 5.4 5.6 1.7 0 3-.8 3.8-2v1.7h2.1V18.2h-2v1.5zm-3.5 7.4a3.5 3.5 0 01-3.7-3.7c0-2 1.5-3.6 3.7-3.6 2.1 0 3.6 1.6 3.6 3.6s-1.5 3.7-3.6 3.7zM68.7 19.8h-.1c-.8-1.1-2.2-2-3.8-2-3.1 0-5.4 2.4-5.4 5.7 0 3.2 2.2 5.6 5.4 5.5 1.6 0 3-.7 3.7-1.8h.2v1.5h2V13.4h-2v6.4zM65 27.1a3.5 3.5 0 01-3.7-3.6c0-2 1.4-3.7 3.7-3.7 2.1 0 3.5 1.7 3.5 3.7S67.2 27 65.1 27zM78.3 17.9a5.4 5.4 0 00-5.5 5.6c0 3 2.1 5.5 5.6 5.5 2.5 0 4.4-1.3 5.2-3.6h-2.2c-.4 1-1.6 1.7-3 1.7-1.9 0-3.2-1.3-3.4-3h8.8c.2-3.5-2-6.2-5.5-6.2zm0 2c1.7 0 3 1 3.3 2.5H75a3.2 3.2 0 013.2-2.6zM98.2 17.9c-1.6 0-2.9.8-3.6 2-.6-1.2-1.8-2-3.4-2-1.4 0-2.5.7-3.1 1.8v-1.5h-2v10.5h2v-5.4c0-2 1-3.4 2.6-3.5 1.5 0 2.4 1 2.4 2.7v6.2h2v-5.6c0-2.3 1.4-3.3 2.7-3.3 1.4 0 2.3 1 2.3 2.7v6.2h2v-6.5c0-2.5-1.4-4.3-3.9-4.3zM109.4 27l-3.6-8.8h-2.2l4.8 11.5c-.4 1-.8 1.3-1.7 1.3h-2.5v2h2.5c1.8 0 2.8-.8 3.5-2.6l4.7-12.2h-2.1l-3.4 8.8z"/></g><defs><clipPath id="clip0"><path fill="#fff" d="M0 0h115v33H0z"/></clipPath></defs></svg>
           </a>
         </div>

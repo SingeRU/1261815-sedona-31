@@ -30,7 +30,10 @@
   --active-brown: #503E33;
   --special-gray: #EEEEEE;
   --border-gray: #E5E5E5;
+  --button-gray: #ABABAB;
+  --shadow-gray: #cfcfcf;
   --hover-gray: #EBEBEB;
+  --scale-gray: #d7dcde;
 }
 
 /* Global */
@@ -41,7 +44,7 @@
 
 .page {
   height: 100%;
-  background-color: var(--basic-white);
+  background-color: var(--basic-gray);
 }
 
 .page__body {
@@ -218,7 +221,7 @@ img {
 
 .reasons__container {
   display: grid;
-  grid-template-rows: 256px;
+  grid-template-rows: 1fr;
   grid-template-columns: 400px 1fr;
   margin-top: 51px;
 }
@@ -227,6 +230,7 @@ img {
   background-color: var(--basic-skyblue);
   display: flex;
   flex-direction: column;
+  height: auto;
   padding-top: 45px;
   color: var(--basic-white);
 }
@@ -297,7 +301,7 @@ img {
 }
 
 .features-item {
-  padding-top: 159px;
+  padding-top: 153px;
   position: relative;
   list-style: none;
 }
@@ -358,8 +362,9 @@ img {
 }
 
 .location__button {
+  display: inline-block;
   width: 568px;
-  height: 86px;
+  padding: 31px 0;
   background-color: var(--basic-brown);
   font-size: 21px;
   font-weight: bold;
@@ -380,16 +385,22 @@ img {
   color: var(--opacity-white);
 }
 
+.location__map {
+  background: url("../img/map.jpg");
+  width: 1200px;
+  height: 549px;
+}
+
 /* Footer */
 
 .page-footer {
   display: flex;
   align-items: center;
   background-color: var(--footer-white);
-  position: relative;
-  bottom: 124px;
+  position: absolute;
   padding-top: 23px;
   padding-bottom: 39px;
+  top: 2640px;
 }
 
 .catalog-footer {
@@ -429,51 +440,35 @@ img {
 .social-list {
   padding: 0;
   margin: 0;
+  list-style: none;
   padding-top: 12px;
   display: flex;
   justify-content: center;
 }
 
-.social-item {
-  list-style: none;
-  background-color: var(--basic-skyblue);
+.social__item:nth-child(2) {
+  margin: 0 6px;
+}
+
+.social-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 46px;
   height: 48px;
-  position: relative;
-  cursor: pointer;
+  background-color: var(--basic-skyblue);
 }
 
-.social-item:hover {
+.social-button:hover {
   background-color: var(--special-skyblue);
-  transition: 0.3s ease-out;
 }
 
-.social-item:active{
+.social-button:focus {
   background-color: var(--active-skyblue);
-  transition: 0.3s ease-out;
 }
 
-
-.social-item:nth-child(2) {
-  margin: 0 6px 0 6px;
-}
-
-.social__image--twitter {
-  position: absolute;
-  left: 15px;
-  top: 18px;
-}
-
-.social__image--facebook {
-  position: absolute;
-  left: 17px;
-  top: 12px;
-}
-
-.social__image--youtube {
-  position: absolute;
-  left: 13px;
-  top: 18px;
+.social-button:focus path {
+  fill: var(--opacity-white);
 }
 
 .copyright {
@@ -588,7 +583,7 @@ img {
 }
 
 .range-filter {
-  width: 317px;
+  width: 340px;
   margin-left: 348px;
 }
 
@@ -614,7 +609,9 @@ img {
 
 .range-controls .scale {
   height: 2px;
-  background: #d7dcde;
+  width: 80%;
+  position: relative;
+  background: var(--scale-gray);
 }
 
 .range-controls .bar {
@@ -623,21 +620,44 @@ img {
   background: var(--basic-white);
 }
 
+.range-controls .opacity-bar {
+  position: absolute;
+  width: 20%;
+  right: -62px;
+  top: 0;
+  height: 2px;
+  background: var(--basic-white);
+  opacity: 0.3;
+}
+
 .range-controls .toggle {
   position: absolute;
   top: 13px;
-  left: 0;
-  width: 4px;
-  height: 4px;
-  padding: 0;
-  border: 8px solid var(--basic-white);
   border-radius: 50%;
-  box-shadow: 0 2px 1px 0 #cfcfcf;
   cursor: pointer;
 }
 
 .range-controls .toggle-min {
   left: 2px;
+}
+
+.range-controls .toggle-min::before,
+.range-controls .toggle-max::before {
+  position: absolute;
+  content: "";
+  width: 19px;
+  height: 20px;
+  background: url("../img/filter-button.svg");
+  z-index: 10;
+}
+
+.range-controls .toggle-min:hover::before,
+.range-controls .toggle-max:hover::before {
+  background: url("../img/filter-button-hover.svg");
+  width: 23px;
+  height: 24px;
+  top: -2px;
+  left: -2px;
 }
 
 .range-controls .toggle-max {
@@ -646,6 +666,19 @@ img {
 
 .price-controls {
   position: relative;
+  border: 2px solid var(--basic-white);
+  border-radius: 2px;
+  width: 321px;
+}
+
+.price-controls::after {
+  position: absolute;
+  content: "";
+  width: 2px;
+  height: 22px;
+  background-color: var(--basic-white);
+  top: 5px;
+  left: 160px;
 }
 
 .price-controls label {
@@ -658,10 +691,10 @@ img {
   padding: 7px 0 6px 44px;
   text-align: center;
   color: var(--basic-white);
-  border: 2px solid var(--basic-white);
+  border: none; 
   background: inherit;
   font-family: inherit;
-  font-size: inherit;
+  font-size: 14px;
   border-radius: 2px;
 }
 
@@ -675,14 +708,15 @@ img {
 }
 
 .min-price__text {
-  left: 67px;
-  top: 28%;
+  left: 64px;
+  top: 8px;
 }
 
 .max-price__text {
-  right: 84px;
-  top: 28%;
+  right: 89px;
+  top: 8px;
 }
+
 
 .filter__button {
   width: 137px;
@@ -922,7 +956,7 @@ img {
 
 .rating-text {
   margin: 0;
-  background-color: #F2F2F2;
+  background-color: var(--basic-gray);
   margin-top: 70px;
   padding: 5px 15px;
 }
@@ -932,9 +966,9 @@ img {
 .modal {
   display: none;
   position: absolute;
+  margin-left: 315px;
   width: 569px;
   height: 395px;
-  left: 668px;
   top: 2169px;
   padding: 46px 53px 53px 53px;
   background-color: var(--basic-white);
@@ -951,6 +985,10 @@ img {
 .modal-show {
   display: block;
   animation: bounce 0.6s;
+}
+
+.modal-error {
+  animation: shake 0.6s;
 }
 
 .arrive {
@@ -1035,6 +1073,7 @@ img {
 .arrive-input::placeholder,
 .departure-input::placeholder {
   color: var(--basic-black);
+  opacity: 1;
 }
 
 .arrive-input {
@@ -1125,7 +1164,7 @@ img {
 
 .check__box {
   position: absolute;
-  width: 27px;
+  width: 26px;
   height: 23px;
   left: 1px;
   background: url("../img/checkbox.svg") no-repeat;
@@ -1137,6 +1176,11 @@ img {
 
 .checkbox__input:disabled + .check__box {
   background-image: url("../img/checkbox-disabled.svg");
+}
+
+.checkbox__input:focus + .check__box {
+  outline: 2px solid var(--basic-skyblue);
+  border-radius: 2px;
 }
 
 .check__box--parking {
@@ -1204,5 +1248,27 @@ img {
 
   100% {
     transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
   }
 }
